@@ -1,3 +1,5 @@
+import os
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 """
 Django settings for djangosite project.
 
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'djangosite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
